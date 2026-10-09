@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {debt} from './debt.ts';
+import {docTien} from './money.ts';
+import {totals} from './totals.ts';
+const d=debt(100,[{id:1,total:200},{id:2,total:300}],[{invoice_id:null,amount:150},{invoice_id:2,amount:50}]);
+assert.equal(d.opening,0);assert.equal(d.remaining.get(1),150);assert.equal(d.remaining.get(2),250);assert.equal(d.balance,400);
+assert.equal(debt(0,[{id:1,total:100}],[{invoice_id:null,amount:130}]).balance,-30);
+assert.equal(docTien(1250000),'Một triệu hai trăm năm mươi nghìn đồng');
+assert.equal(docTien(2005000),'Hai triệu không trăm lẻ năm nghìn đồng');
+assert.equal(docTien(21),'Hai mươi mốt đồng');
+assert.equal(docTien(1000000000),'Một tỷ đồng');
+assert.deepEqual(totals([{qty:2,price:1000,discount_percent:10},{qty:1.5,price:200,discount_percent:0}],100,10),{subtotal:2100,after:2000,vat:200,total:2200});
+console.log('ok');

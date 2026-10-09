@@ -1,0 +1,32 @@
+{
+  "name": "metalwork-magicui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:setup": "node --no-warnings --env-file=.env.local scripts/setup.ts",
+    "test": "node --no-warnings src/lib/lib.test.ts"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "motion": "^12.0.0",
+    "next": "^15.5.0",
+    "pdfkit": "^0.20.2",
+    "postgres": "^3.4.9",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pdfkit": "^0.17.6",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.8.3"
+  }
+}
