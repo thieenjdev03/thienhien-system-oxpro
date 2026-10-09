@@ -1,11 +1,11 @@
-/* Hệ thiết kế admin Thiện Hiền. Token một chỗ; màu nhấn đồng #8a5a2b (chữ trắng 5,9:1). */
+/* Hệ thiết kế admin Thiện Hiền. Token một chỗ; màu chính navy #16324F, điểm nhấn cam #F28C28 (chỉ dùng cho điểm nhấn nhỏ). */
 .adm,.login{
- --primary:#8a5a2b;--primary-hover:#7d5226;--primary-fg:#fff;--ring:#8a5a2b1a;
- --bg:#f5f4f1;--surface:#fff;--ink:#1d2625;--muted:#656d6b;
- --line:#ece9e4;--line-strong:#e0dcd5;--item-hover:#f5f4f1;--secondary:#e9e6e0;--row-hover:#faf9f7;--btn-hover:#f1efeb;
+ --primary:#16324F;--primary-hover:#10283F;--primary-fg:#fff;--ring:#16324F26;--accent:#F28C28;
+ --bg:#F5F5F2;--surface:#fff;--ink:#1C2935;--muted:#586575;
+ --line:#DDE2E5;--line-strong:#C9D1D6;--item-hover:#EEF1F3;--secondary:#E3E8EC;--row-hover:#F8F9FA;--btn-hover:#EEF1F3;
  --danger:#be123c;--danger-bg:#be123c14;--success:#047857;--success-bg:#04785714;--warning:#b45309;--warning-bg:#b4530914;
  --r:12px;--ctl:44px;
- font-size:14px;line-height:1.5;color:var(--ink);-webkit-font-smoothing:antialiased}
+ font-family:'Be Vietnam Pro',sans-serif;font-size:14px;line-height:1.5;color:var(--ink);-webkit-font-smoothing:antialiased}
 @media(min-width:768px){.adm,.login{--ctl:40px}}
 .adm *,.login *{box-sizing:border-box}
 .adm a{color:inherit;text-decoration:none}
@@ -14,12 +14,11 @@
 .side{position:sticky;top:0;height:100vh;width:248px;flex:none;display:flex;flex-direction:column;background:var(--surface)}
 .abrand{display:flex;align-items:center;gap:10px;height:64px;padding:0 20px;border-bottom:1px solid var(--line)}
 .abrand b{display:block;font-size:14px;font-weight:600;line-height:1.2}.abrand div span{display:block;font-size:12px;color:var(--muted);line-height:1.2}
-.mark{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:var(--primary);color:var(--primary-fg);flex:none}
-.mark svg{width:20px;height:20px}
+.mark{display:grid;place-items:center;width:40px;height:34px;flex:none}
 .anav{flex:1;overflow-y:auto;padding:12px}
 .anav h4{margin:16px 0 4px;padding:0 12px;height:24px;display:flex;align-items:center;font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 .anav div:first-child h4{margin-top:0}
-.anav a{display:flex;align-items:center;gap:10px;height:40px;padding:0 12px;margin-bottom:4px;border-radius:12px;color:#1d2625b3;transition:background .15s}
+.anav a{display:flex;align-items:center;gap:10px;height:40px;padding:0 12px;margin-bottom:4px;border-radius:12px;color:#1C2935b3;transition:background .15s}
 .anav a:hover{background:var(--item-hover);color:var(--ink)}
 .anav a[aria-current=page]{background:var(--secondary);color:var(--ink);font-weight:500}
 .me{display:flex;align-items:center;gap:10px;margin:12px;padding:8px;border:1px solid var(--line-strong);border-radius:12px}
@@ -40,6 +39,7 @@
 @media(max-width:767px){.adm main{padding:16px}.top{padding:0 16px}}
 @media(prefers-reduced-motion:reduce){.side,.scrim{transition:none}}
 /* ---- chữ ---- */
+.adm h1,.login h1,.adm h2{font-family:'Montserrat',sans-serif}.adm a[aria-current=page]{box-shadow:inset 3px 0 0 var(--accent)}
 .adm h1{margin:0;font-size:20px;line-height:28px;font-weight:700;letter-spacing:-.01em}
 .adm h2{margin:12px 0 0;font-size:14px;font-weight:600}
 .adm p{margin:0}
